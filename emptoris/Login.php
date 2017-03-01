@@ -178,39 +178,9 @@ body
     </div>
     </div>
 <?php require('inclFooterJS.php'); ?>
-
 <script>
 $("#btnLogin").click(function()
-{ 
-    
-    $.ajax({
-                type: "POST",
-                contentType: "text/html",
-                url: "https://sepilot.ssmcloud.com/emptoris/j_security_check",
-                // This is the type what you are waiting back from the server
-                //dataType: "text",
-                crossDomain: true,
-                data: "j_username=tvirk&j_password=demo2win",
-                success: function(data, textStatus, xhr) {
-                    if (response.redirect) {
-                        window.location.href = response.redirect;
-                    }
-                    else {
-                            console.log('Thanks for your signin in! ' + xhr.status);
-                            console.log(data);
-                    }
-     
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                    //window.location = "/SesamaMaven/index.html";
-                    alert(' Error in signIn-process!! ' + textStatus);
-                },
-               // beforeSend: setHeader
-                
-
-            });
-        
+{
 	var FormData = $('#frmLogin').serializeArray();
 	$('#Preloader').modal( { show: true, backdrop: 'static', keyboard: false, opacity:1 });
 			
@@ -227,8 +197,6 @@ $("#btnLogin").click(function()
 		}
 		return false;
 	},'json');
-        
-       // $.cookie("LtpaToken2", "NbhLDRGCJyp2Mf+77dogcSvVUVXFe8UGxy9ZDF9hKMoDL45+7uKwlVcK7ppKRGw7KLDblj46F/SVxPaaH4dJ2yVJLQulI1rGcwiqkBrff874mx53CRxJTCDfuR5x1c146MHgVXJygM/nvzPAw96dsVCKWKejlbALxzzpmfcs9LBav1A2mmzEzqE9ho88Zk/2bYt7hrW23g2W6eEA0i5KwTt5ZiHKvK3oq3WelldennodEpk3/lSvRAaYKLwViWBKPvWoCfMQJZeLSV6BF401/yNrFU4M69C1tJemuxdBOs1E7oCjouQNKz7hmjcBGbeJ3twvEyePUJLtxDmvMqeOog==; Domain=sepilot.ssmcloud.com;  Path=/; HttpOnly;Secure")
 });
 				
 </script>
