@@ -259,7 +259,7 @@ Helper::GetManager()->ValidateSession();
 						var QDT			= new Date(Date.now()).toString();
 						var	fQDT		= QDT.substring(4, QDT.indexOf('GMT') );
 						var Response	= 'Sorry, there is no supplier record found for "'+Question+'". You may follow the URL below to add a Supplier record inline with your corporate policies.';
-						Response+= '<br /> <a href="https://sepilot.ssmcloud.com/srm-app/ux/selfreg.html#/self-reg/">https://sandbox.ssmcloud.com/srm-app/ux/selfreg.html#/self-reg/</a>'
+						Response+= '<br /> <a href="https://sepilot.ssmcloud.com/srm-app/ux/selfreg.html#/self-reg/">Supplier self-registration</a>'
 						var MessageResp	= '<div class="container-fluid" style="width:97%">';
 						MessageResp+= '	<div class="row">';
 						MessageResp+= '		<div class="col-xs-6">&nbsp;</div>';
