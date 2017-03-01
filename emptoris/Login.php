@@ -158,7 +158,7 @@ body
                         <form id="frmLogin" name="frmLogin" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="Username" name="Username" value="tahir.virk@uk.ibm.com" placeholder="username@domain.com" />
+                                <input type="email" class="form-control" id="Username" name="Username" value="moyr@us.ibm.com" placeholder="username@domain.com" />
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
