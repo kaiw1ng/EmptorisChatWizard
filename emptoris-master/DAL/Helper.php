@@ -22,10 +22,10 @@ class Helper
 //	protected				$_PDO_DB_HOST			= 'localhost';
 //	protected				$_PDO_DB_USER			= 'root';
 //	protected				$_PDO_DB_PASS			= 'namnam';
-	protected				$_PDO_DB_NAME			= 'ad_b9e5df8a9b5e0c8';
+	protected				$_PDO_DB_NAME			= 'ad_98c4f7e9b20a7f1';
 	protected				$_PDO_DB_HOST			= 'us-cdbr-iron-east-04.cleardb.net';
-	protected				$_PDO_DB_USER			= 'b52d9c9c7e1637';
-	protected				$_PDO_DB_PASS			= 'f8202284';
+	protected				$_PDO_DB_USER			= 'be29f567297ba0';
+	protected				$_PDO_DB_PASS			= '57064f93';
 	private static			$_DB_MANAGER;
 	private					$_DB_CONNECTION;
 	public					$_FUNC					= "nameParams";
