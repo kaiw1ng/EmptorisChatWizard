@@ -3,14 +3,9 @@ require ("DAL/Helper.php");
 
 $Username = Helper::GetManager()->GetParameterValue('Username');
 $Password = Helper::GetManager()->GetParameterValue('Password');
-//$Ltpa = Helper::GetManager()->GetParameterValue('LtpaToken2');
-
 $TableName 	= "tblusers";
 $Filters 	= array('Username' => $Username, 'Password'=> $Password);
 $Resultset 	= Helper::GetManager()->SelectQuick($Filters, $TableName);
-
-//echo "LTPA:";
-//echo $Ltpa;
 
 if(count($Resultset)>0)
 {
