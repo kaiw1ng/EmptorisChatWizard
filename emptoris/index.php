@@ -1,6 +1,11 @@
 <?php
 require('DAL/Helper.php');
-Helper::GetManager()->ValidateSession();
+if (! isset ( $_COOKIE [COOKIENAME] )) 
+{
+    header("Location: Login.php"); 
+	exit();
+}
+setcookie (COOKIENAME, "Userbruh",time()+3600);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,32 +1,106 @@
 <?php
-require ("emptoris/DAL/Helper.php");
+require ("DAL/Helper.php");
 
-$Username = Helper::GetManager()->GetParameterValue('Username');
+$Username = Helper::GetManager()->GetParameterValue('EmailAddress');
 $Password = Helper::GetManager()->GetParameterValue('Password');
-$TableName 	= "tblusers";
-$Filters 	= array('Username' => $Username, 'Password'=> $Password);
-$Resultset 	= Helper::GetManager()->SelectQuick($Filters, $TableName);
 
-if(count($Resultset)>0)
+if ($Username == "mqureshi@ae.ibm.com" && $Password== "namnam") 
 {
-	foreach ($Resultset as $Fields)
-	{
-		$IsActive 	= $Fields['IsActive'];
-		$FirstName	= $Fields['FirstName'];
-		$LastName	= $Fields['LastName'];
-		$UserId 	= $Fields['UserId'];
-		setcookie (COOKIE_USERID,	$UserId,	time()+336000);
-		setcookie (COOKIE_FIRSTNAME,$FirstName,	time()+336000);
-		setcookie (COOKIE_LASTNAME,	$LastName,	time()+336000);
-		$Response['UserId'] 	= $UserId;
-		$Response['IsActive'] 	= $IsActive;
-		$Response['FirstName'] 	= $FirstName;
-		$Response['LastName'] 	= $LastName;
-	}
-	echo json_encode($Response);
-} 
-else 
-{
-	$Response['IsActive']="Invalid username and/or password, please retry.";
-	echo json_encode($Response);
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
 }
+elseif($Username == "pnash@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "dpcoakle@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "grazia.ruggiero@it.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "jannie.nicolaisen@se.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "jsadikovic@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "jraftery@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "jafrances@es.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "osabitsa@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "patricia.linss@ch.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "moyr@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "rogerioa@ca.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "tmuhanna@us.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "surenegi@in.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+ echo 1;
+}
+elseif($Username == "tahir.virk@uk.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "yuew@cn.ibm.com" && $Password== "emptoris") 
+{
+    setcookie (COOKIENAME, "User",time()+30);
+	echo 1;
+}
+elseif($Username == "cdewitt@us.ibm.com" && $Password== "emptoris")
+{
+    setcookie (COOKIENAME, "User",time()+30);
+        echo 1;
+}
+elseif($Username == "dkroeber@us.ibm.com" && $Password== "emptoris")
+{
+    setcookie (COOKIENAME, "User",time()+30);
+        echo 1;
+}
+elseif($Username == "gdaustin@us.ibm.com" && $Password== "emptoris")
+{
+    setcookie (COOKIENAME, "User",time()+30);
+        echo 1;
+}
+else
+{
+	echo 0;
+}
+?>

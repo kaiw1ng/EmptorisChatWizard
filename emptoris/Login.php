@@ -1,5 +1,5 @@
 <?php
-require('emptoris/DAL/Helper.php');
+require('DAL/Helper.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
