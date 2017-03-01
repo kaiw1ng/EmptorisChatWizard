@@ -1,5 +1,6 @@
 <?php
 require('DAL/Helper.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ require('DAL/Helper.php');
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>IBM Emptoris Procurement Advisor</title>
+<title>IBM Emptoris Virtual Agent</title>
 <!-- Bootstrap -->
 <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="dist/css/emptoris_custom.css" rel="stylesheet">
@@ -124,30 +125,17 @@ body
 	<!-- /.modal -->
 	<!--Alerts Section : Starts Here-->
 
-	<!--Preloader : Starts Here-->
-<div class="modal" id="Preloader" style="position: absolute; height: 50%; top: 35%; left: 25%; width: 50%; text-align: center; overflow: hidden">
-    <div id="loading" class="loading" style="display: block;">
-        <br /><br />
-		<span class="loading-panel--description" id="PreloaderMessage" name="PreloaderMessage">Processing...</span>
-        <div class="small">
-            <div class="loading-panel">
-            <div class="loading-panel--animation">
-                <svg class="loading-panel--animation-graphics" viewBox="50 50 100 100">
-                  <circle class="loading-panel--animation-circle" r="20" cy="100" cx="100"/>
-                </svg>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Preloader : Ends Here-->
+	<div class="modal" id="Preloader"
+		style="position: absolute; height: 50%; top: 35%; left: 25%; width: 50%; text-align: center;">
+		<span id="Preloader_Message"><img src="Design/Preloader.gif" /></span>
+	</div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-1 col-sm-2 col-md-3">&nbsp;</div>
             <div class="col-xs-10 col-sm-8 col-md-6">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-12"><h3>IBM Emptoris Procurement Advisor</h3></div>
+                        <div class="col-xs-12"><h3>IBM Emptoris Virtual Agent </h3></div>
                     </div>
                     <div class="clear-fix">&nbsp;</div>
                     <div class="row">
@@ -158,11 +146,11 @@ body
                         <form id="frmLogin" name="frmLogin" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="Username" name="Username" value="moyr@us.ibm.com" placeholder="username@domain.com" />
+                                <input type="email" class="form-control" id="EmailAddress" name="EmailAddress" placeholder="username@domain.com" />
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="Password" name="Password" value="emptoris" placeholder="Password" />
+                                <input type="password" class="form-control" id="Password" name="Password" placeholder="Password" />
                             </div>
                             <div class="clear-fix">&nbsp;</div>
                             <button type="button" id="btnLogin" name="btnLogin" class="btn btn-primary" style="font-size: 18px; font-weight:bold;">Sign in</button>
@@ -187,7 +175,7 @@ $("#btnLogin").click(function()
 	$.post('ValidateLogin.php', FormData, function(Response) 
 	{
 		$('#Preloader').modal('toggle');
-		if ( Response.UserId > 0 && Response.IsActive > 0 )
+		if (Response == 1)
 		{
 			setTimeout( location.href='index.php', 1000);
 		}
@@ -196,7 +184,7 @@ $("#btnLogin").click(function()
 		    $("#ErrorMessage").html("Invalid Username and/or Password, please retry.");
 		}
 		return false;
-	},'json');
+	});
 });
 				
 </script>
