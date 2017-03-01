@@ -1,3 +1,7 @@
+<?php
+require('DAL/Helper.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
