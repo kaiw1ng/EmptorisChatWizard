@@ -1,5 +1,5 @@
 <?php
-require ("DAL/Helper.php");
+require ("emptoris/DAL/Helper.php");
 
 $Username = Helper::GetManager()->GetParameterValue('Username');
 $Password = Helper::GetManager()->GetParameterValue('Password');

@@ -21,7 +21,7 @@ class Helper
 //	protected				$_PDO_DB_USER			= 'root';
 //	protected				$_PDO_DB_PASS			= 'namnam';
 	protected				$_PDO_DB_NAME			= 'ad_98c4f7e9b20a7f1';
-	protected				$_PDO_DB_HOST			= 'us-cdbr-iron-east-04.cleardb.net';
+	protected				$_PDO_DBlt_HOST			= 'us-cdbr-iron-east-04.cleardb.net';
 	protected				$_PDO_DB_USER			= 'be29f567297ba0';
 	protected				$_PDO_DB_PASS			= '57064f93';
 	private static			$_DB_MANAGER;
