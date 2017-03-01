@@ -6,9 +6,9 @@ $ConversationId			= Helper::GetManager()->GetParameterValue('ConversationId');
 $DialogTurnCounter		= Helper::GetManager()->GetParameterValue('DialogTurnCounter');
 $DialogRequestCounter	= Helper::GetManager()->GetParameterValue('DialogRequestCounter');
 $DialogNode				= Helper::GetManager()->GetParameterValue('DialogNode');
-$WS_UserName			= 'a6f668f2-9496-4193-82ad-edaf08ef7530';
-$WS_Password			= 'sULxyWB3giZQ';
-$WorkspaceID			= 'e7da64d1-9a7f-4dcb-89a7-a183fa19df42';
+$WS_UserName			= 'ffb51807-f0a5-4015-86ed-7227934b6420';
+$WS_Password			= 'M8dfw8cumDqP';
+$WorkspaceID			= '7ca2d110-1fe8-408e-84e7-1b432a2bd1c4';
 
 	if ($ConversationId !== "")
 	{
