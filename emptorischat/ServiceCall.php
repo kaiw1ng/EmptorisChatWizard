@@ -23,7 +23,7 @@ $WorkspaceID			= '7ca2d110-1fe8-408e-84e7-1b432a2bd1c4';
 	}
 	$QueryData = json_encode($QueryData);
 		
-	$URL='https://gateway.watsonplatform.net/conversation/api/v1/workspaces/'.$WorkspaceID.'/message?version=2016-09-20';
+	$URL='https://gateway.watsonplatform.net/conversation/api'.$WorkspaceID.'/message?version=2016-09-20';
  
     $Curl_Request = curl_init();
     curl_setopt($Curl_Request, CURLOPT_URL,$URL);
