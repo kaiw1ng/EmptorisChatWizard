@@ -6,7 +6,7 @@
         curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);  
         curl_setopt($req, CURLOPT_SSL_VERIFYHOST, false); 
         curl_setopt($req, CURLOPT_POST,           true ); 
-        $data = array('j_username' => 'tvirk', 'j_password' => 'demo2win');
+        $data = array('j_username' => 'rmoy', 'j_password' => 'win3demo');
         curl_setopt($req, CURLOPT_POSTFIELDS,    http_build_query($data));
         curl_setopt($req, CURLOPT_FOLLOWLOCATION, false);
         curl_setopt($req, CURLOPT_HEADER, 1);
