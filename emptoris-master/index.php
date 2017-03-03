@@ -22,7 +22,7 @@ Helper::GetManager()->ValidateSession();
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body background="Design/night_sky.jpg">
 <!--Alerts Section : Starts Here-->
 <div id="AlertContainer" class="modal fade">
     <div class="modal-dialog" style="width: 60%">
@@ -111,11 +111,11 @@ Helper::GetManager()->ValidateSession();
 				<h5 style="padding-top: 0px; padding-bottom: 0px;">
 				<table border="0" width="100%">
 					<tr>
-						<td width="50%">IBM Emptoris Virtual Agent</td>
-						<td  width="48%" style="text-align: right"><img alt="IBM Emptoris Virtual Agent" title="IBM Emptoris Virtual Agent" src="Design/AppLogo.png" /></td>
+						<td width="60%"><font color="white">IBM Emptoris Virtual Agent</font></td>
+						<td  width="90%" style="text-align: right"><img alt="IBM Emptoris Virtual Agent" title="IBM Emptoris Virtual Agent" src="Design/AppLogo.png" /></td>
 					</tr>
 					<tr>
-						<td colspan="2" style="font-size:10px">&nbsp;</td>
+						<td colspan="2" style="font-size:18px">&nbsp;</td>
 					</tr>
 				</table>
 				</h5>
