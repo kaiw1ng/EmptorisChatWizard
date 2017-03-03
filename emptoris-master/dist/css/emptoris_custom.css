@@ -551,7 +551,7 @@ img {
 .ChatQuestion
 {
     border-radius: 8px;
-    background-color: #CFEDFB;
+    background-color: #ffc0cb;
     padding:10px 10px;
     margin-left: 15px;
 }
@@ -559,7 +559,7 @@ img {
 .ChatResponse
 {
     border-radius: 8px;
-    background-color: #f0f0f0;
+    background-color: #CFEDFB;
     padding:15px 10px;
 }
 
