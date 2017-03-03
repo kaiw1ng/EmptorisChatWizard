@@ -108,18 +108,18 @@ Helper::GetManager()->ValidateSession();
 			<input type="hidden" name="Agreement_Scope"				id="Agreement_Scope" 
     
 			<div id="MainSection">
-				<h3 style="padding-top: 0px; padding-bottom: 0px;">
+				<h5 style="padding-top: 0px; padding-bottom: 0px;">
 				<table border="0" width="100%">
 					<tr>
 						<td width="50%">IBM Emptoris Virtual Agent</td>
 						<td  width="48%" style="text-align: right"><img alt="IBM Emptoris Virtual Agent" title="IBM Emptoris Virtual Agent" src="Design/AppLogo.png" /></td>
 					</tr>
 					<tr>
-						<td colspan="2" style="font-size:18px">&nbsp;</td>
+						<td colspan="2" style="font-size:10px">&nbsp;</td>
 					</tr>
 				</table>
-				</h3>
-				<div id="BodyPlaceHolder" name="BodyPlaceHolder" style="height: 63vh; overflow-x: auto">&nbsp;</div>
+				</h5>
+				<div id="BodyPlaceHolder" name="BodyPlaceHolder" style="height: 65vh; overflow-x: auto">&nbsp;</div>
 				<div class="ContentBox">
 					<div class="container-fluid">
 					
