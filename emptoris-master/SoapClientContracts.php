@@ -13,7 +13,7 @@ $Agreement_FirstLetter		= substr(Helper::GetManager()->GetParameterValue('FirstN
 $Agreement_SecondLetter		= substr(Helper::GetManager()->GetParameterValue('LastName'), 0,1);
 $objCurrentDateTime			= new DateTime();
 $ContractNameTitle			= $Agreement_FirstLetter.$Agreement_SecondLetter." - NDA - ". $objCurrentDateTime->format('Y-m-d His');
-$LtpaToken				= Helper::GetManager()->GetParameterValue('LtpaToken2');
+$LtpaToken					= Helper::GetManager()->GetParameterValue('LtpaToken2');
 
 $URL='https://sepilot.ssmcloud.com/webservices/services/ContractServices';
 /*
@@ -56,15 +56,14 @@ $PostString='<?xml version="1.0" encoding="utf-8"?>
             <con:effective-start-date>'.$Agreement_Start_Date.'</con:effective-start-date>
             <con:effective-end-date>'.$Agreement_End_Date.'</con:effective-end-date>
             <con:execution-date>'.$Agreement_Start_Date.'</con:execution-date>
-            <con:region>Middle East</con:region>
-            <con:internal-contact-vsm-uuid>6dff80818d114799aa8a012ed0210309</con:internal-contact-vsm-uuid>
-            <con:internal-contact-id>2b834c9010ad4721a074880866819f0f</con:internal-contact-id>
+            <con:region>North America</con:region>
+            <con:internal-contact-id>684832e0848a4db4a1262ed596ab79a1</con:internal-contact-id>
             <con:internal-parties>
                <par:internal-party>
                   <par:party-id>dabaf1e8e6e54c7593f6c056d2493be6</par:party-id>
                   <par:party-name>Emptoris</par:party-name>
                   <par:role>Primary</par:role>
-                  <par:primary-contact-id>2b834c9010ad4721a074880866819f0f</par:primary-contact-id>
+                  <par:primary-contact-id>684832e0848a4db4a1262ed596ab79a1</par:primary-contact-id>
                   <par:addresses>
                      <add:address-reference>
                         <add:id>c86bd4b56e804a279a3c8941583069d6</add:id>
