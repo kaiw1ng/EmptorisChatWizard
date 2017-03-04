@@ -295,7 +295,7 @@ Helper::GetManager()->ValidateSession();
 						var QDT			= new Date(Date.now()).toString();
 						var	fQDT		= QDT.substring(4, QDT.indexOf('GMT') );
 						var ContractURL	= "https://sepilot.ssmcloud.com/dicarta/servereq?hname=cs_load_cs&summary=true&contractID="+JsonRecord['ns2:id'];
-						var Response	= 'Congratulations, a new contract '+ JsonRecord['ns2:contract-number'] +' has been created as per the details provided. You may directly access this contract by clicking <a href="'+ContractURL+'" target="_blank">here</a>';
+						var Response	= 'Success!, a new contract '+ JsonRecord['ns2:contract-number'] +' has been created as per the details provided. You may directly access this contract by clicking <a href="'+ContractURL+'" target="_blank">here</a>';
 						var MessageResp	= '<div class="container-fluid" style="width:97%">';
 							MessageResp+= '	<div class="row">';
 							MessageResp+= '		<div class="col-xs-6">&nbsp;</div>';
