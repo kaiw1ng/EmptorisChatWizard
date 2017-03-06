@@ -12,7 +12,7 @@ $Agreement_Scope			= Helper::GetManager()->GetParameterValue('Agreement_Scope');
 $Agreement_FirstLetter		= substr(Helper::GetManager()->GetParameterValue('FirstName'), 0,1);
 $Agreement_SecondLetter		= substr(Helper::GetManager()->GetParameterValue('LastName'), 0,1);
 $objCurrentDateTime			= new DateTime();
-$ContractNameTitle			= $Agreement_FirstLetter.$Agreement_SecondLetter." - MSA - ". $objCurrentDateTime->format('Y-m-d His');
+$ContractNameTitle			= $Agreement_FirstLetter.$Agreement_SecondLetter." - MPA - ". $objCurrentDateTime->format('Y-m-d His');
 $LtpaToken					= Helper::GetManager()->GetParameterValue('LtpaToken2');
 
 $URL='https://sepilot.ssmcloud.com/webservices/services/ContractServices';
@@ -86,7 +86,7 @@ $PostString='<?xml version="1.0" encoding="utf-8"?>
                </par:external-party>
             </con:external-parties>
             <con:template-reference>
-               <con1:id>df181d2272244fdd805d2ab6de66ea90</con1:id>
+               <con1:id>'.$Agreement_Type.'</con1:id><!--Should come from hard code value in index.php> -->
             </con:template-reference>
             <con:category>Buy</con:category>
          </con:request-data>

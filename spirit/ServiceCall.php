@@ -8,7 +8,7 @@ $DialogRequestCounter	= Helper::GetManager()->GetParameterValue('DialogRequestCo
 $DialogNode				= Helper::GetManager()->GetParameterValue('DialogNode');
 $WS_UserName			= 'ffb51807-f0a5-4015-86ed-7227934b6420';
 $WS_Password			= 'M8dfw8cumDqP';
-$WorkspaceID			= '7ca2d110-1fe8-408e-84e7-1b432a2bd1c4';
+$WorkspaceID			= '690eddbe-1e9c-40d2-8524-4d97462c3df5';
 
 	if ($ConversationId !== "")
 	{
