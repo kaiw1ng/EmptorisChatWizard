@@ -205,6 +205,83 @@ Helper::GetManager()->ValidateSession();
 			{
 				$("#Agreement_Type").val("df181d2272244fdd805d2ab6de66ea90");//Hard coding for the demo
 			}
+			else if (Intent === 'int_confirmTransfer')//intent when tranfer confirmed - below lines are not being used to search suppliers, just need to fail the check so the response returns link to stan :)
+			{
+				var DivHtml= "";
+				$('#Preloader').modal( { show: true, backdrop: 'static', keyboard: false, opacity:1 });
+                                var ltpa = $('#LtpaToken2').val();//$.cookie("LtpaToken2");
+                                console.log("ltpa:" + ltpa);
+				$.post('SoapClientSuppliers.php', {SupplierName:Question, LtpaToken:ltpa}, function(JSONResponseSuppliers)
+				{
+					var TotalResponses	= JSONResponseSuppliers.length;
+					DivHtml= "";
+					if (TotalResponses > 1)
+					{
+						$.each(JSONResponseSuppliers , function (objIndex, objValue)
+						{
+							var InternalId	= objValue['Id'];
+							var SupplierName= objValue['Name'];
+							var AddressId	= (objValue['Address'] === undefined ? '' : objValue['Address']);
+							DivHtml+= '<div class="container-fluid">';
+							DivHtml+= '	<div class="row" id="'+InternalId+'">';
+							DivHtml+= '		<div class="col-xs-12" style="padding:5px 0px;">Did you mean '+SupplierName+'?';
+							DivHtml+= '			<button type="button" name="'+SupplierName+'"  class="btn btn-sm btn-primary SupplierList" style="float:right; padding:2px 5px;" rel="'+AddressId+'" data="'+InternalId+'">Yes</button>';
+							DivHtml+= '		</div>';
+							DivHtml+= '	</div>';//row
+							DivHtml+= '</div>';
+						});
+						$("#AlertTitle").html("Potential Suppliers");
+						$("#AlertTitle").addClass("text-success");
+						$("#btnClose").css('visibility','hidden');
+						$('#AlertBox').addClass("text-success");
+						$('#AlertBox').html(DivHtml);
+						$('#AlertContainer').modal(
+						{
+							show: true,
+							backdrop: 'static',
+							keyboard: false
+						});
+					}
+					else if (TotalResponses === 1)
+					{
+						$.each(JSONResponseSuppliers , function (objIndex, objValue)
+						{
+							var InternalId	= objValue['Id'];
+							var SupplierName= objValue['Name'];
+							var AddressId	= (objValue['Address'] === undefined ? '' : objValue['Address']);
+							$("#Agreement_ExtParty").val(SupplierName);
+							$("#Agreement_ExtParty_Address").val(AddressId);
+							$("#Agreement_ExtParty_IntId").val(InternalId);
+						});
+					}
+					else if (TotalResponses === 0)
+					{
+						var QDT			= new Date(Date.now()).toString();
+						var	fQDT		= QDT.substring(4, QDT.indexOf('GMT') );
+						var Response	= 'All set!  Please click on the following link to speak with my colleague about an NDA.';
+						Response+= '<br /> <br/><a href="https://emptorischatwizard.mybluemix.net/emptoris-master/index.php" target="_blank">Stan can help!</a>'
+						var MessageResp	= '<div class="container-fluid" style="width:97%">';
+						MessageResp+= '	<div class="row">';
+						MessageResp+= '		<div class="col-xs-6">&nbsp;</div>';
+						MessageResp+= '		<div class="col-xs-6 ChatResponse"><strong>Watson:&nbsp;&nbsp;</strong>'+Response+'</div>';
+						MessageResp+= '	</div>';
+						MessageResp+= '	<div class="row">';
+						MessageResp+= '		<div class="col-xs-6">&nbsp;</div>';
+						MessageResp+= '		<div class="col-xs-6" style="font-size:xx-small; color:#999; text-align:right">'+fQDT+'</div>';
+						MessageResp+= '	</div>'
+						MessageResp+= '</div>';
+						$("#BodyPlaceHolder").append(MessageResp);
+						$("#ConversationId").val(JSONResponse.context.conversation_id);
+						$("#DialogTurnCounter").val(JSONResponse.context.system.dialog_turn_counter);
+						$("#DialogRequestCounter").val(JSONResponse.context.system.dialog_request_counter);
+						$("#DialogNode").val(JSONResponse.context.system.dialog_stack[0].dialog_node);
+						$("#Question").removeAttr('readonly');
+						$('#Preloader').modal('toggle');
+						return false;
+					}
+					$('#Preloader').modal('toggle');
+				}, 'json');
+			}
 			else if (Intent === 'int_agreement_primext_party')
 			{
 				var DivHtml= "";
