@@ -105,13 +105,13 @@ Helper::GetManager()->ValidateSession();
 			<input type="hidden" name="Agreement_IntParty"			id="Agreement_IntParty"	/>
 			<input type="hidden" name="Agreement_Start_Date"		id="Agreement_Start_Date" />
 			<input type="hidden" name="Agreement_End_Date"			id="Agreement_End_Date" />
-			<input type="hidden" name="Agreement_Scope"				id="Agreement_Scope" 
+			<input type="hidden" name="Agreement_Scope"				id="Agreement_Scope"
     
 			<div id="MainSection">
 				<h5 style="padding-top: 0px; padding-bottom: 0px;">
 				<table border="0" width="100%">
 					<tr>
-						<td width="60%"><font color="white">  IBM Emptoris Virtual Agent</font></td>
+						<td width="60%"><font color="white"><font color="black">_</font>IBM Emptoris Virtual Agent</font></td>
 						<td  width="90%" style="text-align: right"><img alt="IBM Emptoris Virtual Agent" title="IBM Emptoris Virtual Agent" src="Design/AppLogo.png" /></td>
 					</tr>
 					<tr>
