@@ -147,7 +147,7 @@ body
             <div class="col-xs-10 col-sm-8 col-md-6">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-12"><h3>IBM Emptoris Procurement Advisor</h3></div>
+                        <div class="col-xs-12"><h3>IBM Emptoris Watson ChatB0T</h3></div>
                     </div>
                     <div class="clear-fix">&nbsp;</div>
                     <div class="row">

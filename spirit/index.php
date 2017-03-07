@@ -201,21 +201,21 @@ Helper::GetManager()->ValidateSession();
 				});
 				
 			}
-			else if (Intent === 'int_otherAgreement_sla')
+			else if (Intent === 'int_otherAgreement_facilities')
 			{
-				$("#Agreement_Type").val("91bfd8f5eed6432e9ee18d25fca1defe");//Hard coding for the demo - MSLA template uid on SE Pilot  
+				$("#Agreement_Type").val("6fcc745c9282445685e373b7937dbb73");//Facilities template uid on SE Pilot  
 			}
 			else if (Intent === 'int_agreement_type')
 			{
-				$("#Agreement_Type").val("df181d2272244fdd805d2ab6de66ea90");//Hard coding for the demo - MPA template uid on SE Pilot  
+				$("#Agreement_Type").val("df181d2272244fdd805d2ab6de66ea90");//MPA template uid on SE Pilot  
 			}
 			else if (Intent === 'int_otherAgreement_msa')
 			{
-				$("#Agreement_Type").val("edb62d30aa454670bb9cdab5058c23ba");//Hard coding for the demo - MSA template uid on SE Pilot  
+				$("#Agreement_Type").val("edb62d30aa454670bb9cdab5058c23ba");//MSA template uid on SE Pilot  
 			}
-			else if (Intent === 'int_otherAgreementCSA')
+			else if (Intent === 'int_otherAgreementITHDW')
 			{
-				$("#Agreement_Type").val("1547f46052f34110b47582f48eeee7db");//Hard coding for the demo - MCSA template uid on SE Pilot  
+				$("#Agreement_Type").val("e273f64cddf442878204e0f1d25cf33a");//IT Hardware template uid on SE Pilot  
 			}
 			else if (Intent === 'int_confirmTransfer')//intent when tranfer confirmed - below lines are not being used to search suppliers, just need to fail the check so the response returns link to stan :)
 			{
