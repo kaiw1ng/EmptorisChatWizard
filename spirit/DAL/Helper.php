@@ -1,6 +1,6 @@
 <?php
 /** Global Settings*/
-define ( "COOKIENAME"           , "LtpaToken2" );
+define ( "COOKIENAME"       , "LtpaToken2" );
 define ( "COOKIE_USERID"	, "USERID" );
 define ( "COOKIE_FIRSTNAME"	, "FIRSTNAME" );
 define ( "COOKIE_LASTNAME"	, "LASTNAME" );

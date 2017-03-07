@@ -12,8 +12,9 @@ $Agreement_Scope			= Helper::GetManager()->GetParameterValue('Agreement_Scope');
 $Agreement_FirstLetter		= substr(Helper::GetManager()->GetParameterValue('FirstName'), 0,1);
 $Agreement_SecondLetter		= substr(Helper::GetManager()->GetParameterValue('LastName'), 0,1);
 $objCurrentDateTime			= new DateTime();
-$ContractNameTitle			= $Agreement_FirstLetter.$Agreement_SecondLetter." - MPA - ". $objCurrentDateTime->format('Y-m-d His');
+$ContractNameTitle			= $Agreement_FirstLetter.$Agreement_SecondLetter." - contractRQ - ". $objCurrentDateTime->format('Y-m-d His');
 $LtpaToken					= Helper::GetManager()->GetParameterValue('LtpaToken2');
+
 
 $URL='https://sepilot.ssmcloud.com/webservices/services/ContractServices';
 /*

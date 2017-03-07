@@ -111,7 +111,7 @@ Helper::GetManager()->ValidateSession();
 				<h5 style="padding-top: 0px; padding-bottom: 0px;">
 				<table border="0" width="100%">
 					<tr>
-						<td width="60%"><font color="white">IBM Emptoris Virtual Agent</font></td>
+						<td width="60%"><font color="white">  IBM Emptoris Virtual Agent</font></td>
 						<td  width="90%" style="text-align: right"><img alt="IBM Emptoris Virtual Agent" title="IBM Emptoris Virtual Agent" src="Design/AppLogo.png" /></td>
 					</tr>
 					<tr>
@@ -203,7 +203,15 @@ Helper::GetManager()->ValidateSession();
 			}
 			else if (Intent === 'int_agreement_type')
 			{
-				$("#Agreement_Type").val("df181d2272244fdd805d2ab6de66ea90");//Hard coding for the demo
+				$("#Agreement_Type").val("df181d2272244fdd805d2ab6de66ea90");//Hard coding for the demo - MPA template uid on SE Pilot
+			}
+			else if (Intent === 'int_otherAgreement_msa')
+			{
+				$("#Agreement_Type").val("edb62d30aa454670bb9cdab5058c23ba");//Hard coding for the demo - MSA template uid on SE Pilot
+			}
+			else if (Intent === 'int_otherAgreement_softwareLicense')
+			{
+				$("#Agreement_Type").val("edb62d30aa454670bb9cdab5058c23ba");//Hard coding for the demo - Software License uid template on SE Pilot
 			}
 			else if (Intent === 'int_confirmTransfer')//intent when tranfer confirmed - below lines are not being used to search suppliers, just need to fail the check so the response returns link to stan :)
 			{
