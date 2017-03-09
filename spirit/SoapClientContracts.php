@@ -44,9 +44,9 @@ $PostString='<?xml version="1.0" encoding="utf-8"?>
    <soapenv:Body>
       <con:create-authored-contract-request>
          <con:authentication>
-            <auth:user>rmoy</auth:user>
+            <auth:user>tvirk</auth:user>
             <auth:credential>
-               <auth:password>win3demo</auth:password>
+               <auth:password>demo2win</auth:password>
             </auth:credential>
          </con:authentication>
          <con:request-data>
